@@ -52,3 +52,4 @@ ffmpeg -n -i "$2" -an -map 0:v:0 -f framemd5 "$FRAMEMD5_2"
 cut -d, -f6 "$FRAMEMD5_1" | sed 's/ //g' | tail -n +2 > "$FRAMEMD5_HASHONLY_1"
 cut -d, -f6 "$FRAMEMD5_2" | sed 's/ //g' | tail -n +2 > "$FRAMEMD5_HASHONLY_2"
 diff -u "$FRAMEMD5_HASHONLY_1" "$FRAMEMD5_HASHONLY_2" > "${OUTPUT_DIR}/${NAME1%.*}_${PARENT1}_vs_${NAME2%.*}_${PARENT2}_diff.txt"
+hi
